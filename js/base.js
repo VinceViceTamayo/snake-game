@@ -4,6 +4,11 @@ import {update as updateFood, draw as drawFood} from "./food.min.js"
 
 import {outsideGrid} from "./grid.min.js"
 
+export const moveUp = document.getElementById("move-up")
+export const moveDown = document.getElementById("move-down")
+export const moveLeft = document.getElementById("move-left")
+export const moveRight = document.getElementById("move-right")
+
 let lastRenderTime = 0;
 let gameOver = false
 const root = document.getElementById("root")
