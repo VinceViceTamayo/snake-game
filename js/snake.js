@@ -1,8 +1,10 @@
 import { getInputDirection } from "./input.min.js";
+import { score, highScore } from "./base.min.js";
 
 export const snakeSpeed = 10;
 const snakeBody = [ {x: 10, y: 11} ]
 let newSegments = 0
+export let scoreAccumulator = 0
 
 export const update = () => {
     addSegments()
@@ -27,6 +29,8 @@ export const draw = (root) => {
 }
 
 export const expandSnake = (amount) => {
+    scoreAccumulator++
+    score.innerHTML = `Score: ${scoreAccumulator}`
     newSegments += amount
 }
 
